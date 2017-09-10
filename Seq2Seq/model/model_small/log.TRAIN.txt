@@ -1,0 +1,1170 @@
+INFO:root:======== FLAGS ========
+INFO:root:to_vocab_size=100
+INFO:root:learning_rate_decay_factor=0.83
+INFO:root:dump_lstm_output=dump_lstm.pb
+INFO:root:print_beam=False
+INFO:root:dev_path_to=../data/small/valid.tgt
+INFO:root:keep_prob=0.7
+INFO:root:with_summary=False
+INFO:root:test_path_from=./test
+INFO:root:patience=10
+INFO:root:num_layers=2
+INFO:root:size=100
+INFO:root:train_path_from=../data/small/train.src
+INFO:root:from_vocab_size=100
+INFO:root:model_dir=../model/model_small
+INFO:root:summary_dir=../model/model_small/saved_model
+INFO:root:force_decode_output=force_decode.txt
+INFO:root:profile=False
+INFO:root:saveCheckpoint=True
+INFO:root:fromScratch=True
+INFO:root:learning_rate=0.1
+INFO:root:max_ratio=1.5
+INFO:root:batch_size=4
+INFO:root:N=000
+INFO:root:data_cache_dir=../model/model_small/data_cache
+INFO:root:min_ratio=0.5
+INFO:root:max_gradient_norm=5.0
+INFO:root:saved_model_dir=../model/model_small/saved_model
+INFO:root:test_path_to=./test
+INFO:root:decode_output=./output
+INFO:root:n_bucket=10
+INFO:root:train_path_to=../data/small/train.tgt
+INFO:root:beam_search=False
+INFO:root:allow_growth=False
+INFO:root:beam_size=10
+INFO:root:mode=TRAIN
+INFO:root:attention=True
+INFO:root:n_epoch=100
+INFO:root:withAdagrad=True
+INFO:root:dev_path_from=../data/small/valid.src
+INFO:root:======== READ DATA ========
+INFO:root:======== REPORT ========
+INFO:root:from_vocab_size: 100
+INFO:root:to_vocab_size: 100
+INFO:root:_buckets: [(10, 10), (22, 22)]
+INFO:root:Train:
+INFO:root:total: 1000.0
+INFO:root:bucket sizes: [410, 590]
+INFO:root:Dev:
+INFO:root:total: 100
+INFO:root:bucket sizes: [39, 61]
+INFO:root:Steps_per_epoch: 250
+INFO:root:Total_steps:25000
+INFO:root:Steps_per_checkpoint: 125
+INFO:root:======== IN TENSORFLOW ========
+INFO:root:======== MODEL/SUMMARY/WRITER ========
+INFO:root:Creating Model.. (this can take a few minutes)
+INFO:root:Created model with fresh parameters.
+INFO:root:======== All Variables ========
+INFO:root:Variable:0
+INFO:root:Variable_1:0
+INFO:root:Variable_2:0
+INFO:root:source_input_embedding:0
+INFO:root:input_embedding:0
+INFO:root:output_embedding:0
+INFO:root:output_bias:0
+INFO:root:attention_seq2seq/a_w_source:0
+INFO:root:attention_seq2seq/a_w_target:0
+INFO:root:attention_seq2seq/a_b:0
+INFO:root:attention_seq2seq/a_v:0
+INFO:root:attention_seq2seq/h_w_context:0
+INFO:root:attention_seq2seq/h_w_target:0
+INFO:root:attention_seq2seq/h_b:0
+INFO:root:attention_seq2seq/fi_w_x:0
+INFO:root:attention_seq2seq/fi_w_att:0
+INFO:root:attention_seq2seq/fi_b:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_0/lstm_cell/kernel:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_0/lstm_cell/bias:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_1/lstm_cell/kernel:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_1/lstm_cell/bias:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_0/lstm_cell/kernel:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_0/lstm_cell/bias:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_1/lstm_cell/kernel:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_1/lstm_cell/bias:0
+INFO:root:source_input_embedding/Adagrad:0
+INFO:root:input_embedding/Adagrad:0
+INFO:root:output_embedding/Adagrad:0
+INFO:root:output_bias/Adagrad:0
+INFO:root:attention_seq2seq/a_w_source/Adagrad:0
+INFO:root:attention_seq2seq/a_w_target/Adagrad:0
+INFO:root:attention_seq2seq/a_b/Adagrad:0
+INFO:root:attention_seq2seq/a_v/Adagrad:0
+INFO:root:attention_seq2seq/h_w_context/Adagrad:0
+INFO:root:attention_seq2seq/h_w_target/Adagrad:0
+INFO:root:attention_seq2seq/h_b/Adagrad:0
+INFO:root:attention_seq2seq/fi_w_x/Adagrad:0
+INFO:root:attention_seq2seq/fi_w_att/Adagrad:0
+INFO:root:attention_seq2seq/fi_b/Adagrad:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_0/lstm_cell/kernel/Adagrad:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_0/lstm_cell/bias/Adagrad:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_1/lstm_cell/kernel/Adagrad:0
+INFO:root:attention_seq2seq/encoder/rnn/multi_rnn_cell/cell_1/lstm_cell/bias/Adagrad:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_0/lstm_cell/kernel/Adagrad:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_0/lstm_cell/bias/Adagrad:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_1/lstm_cell/kernel/Adagrad:0
+INFO:root:attention_seq2seq/decoder/multi_rnn_cell/cell_1/lstm_cell/bias/Adagrad:0
+INFO:root:======== Data Iterators ========
+INFO:root:Itetype: withRandom
+INFO:root:======== TRAIN ========
+INFO:root:[STEP 30] StepTime: 0.08 sec Speed: 591.46 targets/s Total_targets: 11533
+INFO:root:[STEP 60] StepTime: 0.04 sec Speed: 1241.45 targets/s Total_targets: 11533
+INFO:root:[STEP 90] StepTime: 0.04 sec Speed: 1107.26 targets/s Total_targets: 11533
+INFO:root:[STEP 120] StepTime: 0.05 sec Speed: 967.64 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 1 STEP 125] Learning_rate: 0.1000 Dev_ppx: 25.25 Train_ppx: 28.31
+INFO:root:[CHECKPOINT 1 STEP 125] Model saved using 0.07 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 1 STEP 125] Model saved using 0.06 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 150] StepTime: 0.05 sec Speed: 889.41 targets/s Total_targets: 11533
+INFO:root:[STEP 180] StepTime: 0.05 sec Speed: 952.27 targets/s Total_targets: 11533
+INFO:root:[STEP 210] StepTime: 0.05 sec Speed: 966.66 targets/s Total_targets: 11533
+INFO:root:[STEP 240] StepTime: 0.05 sec Speed: 923.09 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 2 STEP 250] Learning_rate: 0.1000 Dev_ppx: 21.22 Train_ppx: 23.22
+INFO:root:[CHECKPOINT 2 STEP 250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 2 STEP 250] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 270] StepTime: 0.05 sec Speed: 952.94 targets/s Total_targets: 11533
+INFO:root:[STEP 300] StepTime: 0.05 sec Speed: 851.82 targets/s Total_targets: 11533
+INFO:root:[STEP 330] StepTime: 0.05 sec Speed: 893.24 targets/s Total_targets: 11533
+INFO:root:[STEP 360] StepTime: 0.05 sec Speed: 933.90 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 3 STEP 375] Learning_rate: 0.1000 Dev_ppx: 16.94 Train_ppx: 18.49
+INFO:root:[CHECKPOINT 3 STEP 375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 3 STEP 375] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 390] StepTime: 0.04 sec Speed: 919.68 targets/s Total_targets: 11533
+INFO:root:[STEP 420] StepTime: 0.05 sec Speed: 966.29 targets/s Total_targets: 11533
+INFO:root:[STEP 450] StepTime: 0.04 sec Speed: 964.16 targets/s Total_targets: 11533
+INFO:root:[STEP 480] StepTime: 0.05 sec Speed: 976.99 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 4 STEP 500] Learning_rate: 0.1000 Dev_ppx: 14.00 Train_ppx: 15.38
+INFO:root:[CHECKPOINT 4 STEP 500] Model saved using 0.00 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 4 STEP 500] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 510] StepTime: 0.05 sec Speed: 982.05 targets/s Total_targets: 11533
+INFO:root:[STEP 540] StepTime: 0.04 sec Speed: 1046.94 targets/s Total_targets: 11533
+INFO:root:[STEP 570] StepTime: 0.03 sec Speed: 1188.61 targets/s Total_targets: 11533
+INFO:root:[STEP 600] StepTime: 0.04 sec Speed: 1331.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 5 STEP 625] Learning_rate: 0.1000 Dev_ppx: 10.42 Train_ppx: 12.52
+INFO:root:[CHECKPOINT 5 STEP 625] Model saved using 0.00 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 5 STEP 625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 630] StepTime: 0.04 sec Speed: 1257.40 targets/s Total_targets: 11533
+INFO:root:[STEP 660] StepTime: 0.04 sec Speed: 1209.93 targets/s Total_targets: 11533
+INFO:root:[STEP 690] StepTime: 0.04 sec Speed: 1260.94 targets/s Total_targets: 11533
+INFO:root:[STEP 720] StepTime: 0.03 sec Speed: 1143.43 targets/s Total_targets: 11533
+INFO:root:[STEP 750] StepTime: 0.04 sec Speed: 1166.36 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 6 STEP 750] Learning_rate: 0.1000 Dev_ppx: 8.22 Train_ppx: 9.53
+INFO:root:[CHECKPOINT 6 STEP 750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 6 STEP 750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 780] StepTime: 0.04 sec Speed: 1191.42 targets/s Total_targets: 11533
+INFO:root:[STEP 810] StepTime: 0.04 sec Speed: 1163.18 targets/s Total_targets: 11533
+INFO:root:[STEP 840] StepTime: 0.04 sec Speed: 1132.82 targets/s Total_targets: 11533
+INFO:root:[STEP 870] StepTime: 0.04 sec Speed: 1125.27 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 7 STEP 875] Learning_rate: 0.1000 Dev_ppx: 6.13 Train_ppx: 8.25
+INFO:root:[CHECKPOINT 7 STEP 875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 7 STEP 875] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 900] StepTime: 0.05 sec Speed: 1235.95 targets/s Total_targets: 11533
+INFO:root:[STEP 930] StepTime: 0.04 sec Speed: 1090.50 targets/s Total_targets: 11533
+INFO:root:[STEP 960] StepTime: 0.04 sec Speed: 1131.49 targets/s Total_targets: 11533
+INFO:root:[STEP 990] StepTime: 0.04 sec Speed: 1231.49 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 8 STEP 1000] Learning_rate: 0.1000 Dev_ppx: 4.40 Train_ppx: 6.82
+INFO:root:[CHECKPOINT 8 STEP 1000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 8 STEP 1000] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1020] StepTime: 0.04 sec Speed: 1219.32 targets/s Total_targets: 11533
+INFO:root:[STEP 1050] StepTime: 0.04 sec Speed: 1259.23 targets/s Total_targets: 11533
+INFO:root:[STEP 1080] StepTime: 0.03 sec Speed: 1206.83 targets/s Total_targets: 11533
+INFO:root:[STEP 1110] StepTime: 0.04 sec Speed: 1278.36 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 9 STEP 1125] Learning_rate: 0.1000 Dev_ppx: 3.80 Train_ppx: 5.65
+INFO:root:[CHECKPOINT 9 STEP 1125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 9 STEP 1125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1140] StepTime: 0.04 sec Speed: 1278.47 targets/s Total_targets: 11533
+INFO:root:[STEP 1170] StepTime: 0.04 sec Speed: 1205.84 targets/s Total_targets: 11533
+INFO:root:[STEP 1200] StepTime: 0.04 sec Speed: 1307.57 targets/s Total_targets: 11533
+INFO:root:[STEP 1230] StepTime: 0.04 sec Speed: 1176.91 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 10 STEP 1250] Learning_rate: 0.1000 Dev_ppx: 3.20 Train_ppx: 4.67
+INFO:root:[CHECKPOINT 10 STEP 1250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 10 STEP 1250] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1260] StepTime: 0.04 sec Speed: 1179.06 targets/s Total_targets: 11533
+INFO:root:[STEP 1290] StepTime: 0.05 sec Speed: 1073.96 targets/s Total_targets: 11533
+INFO:root:[STEP 1320] StepTime: 0.04 sec Speed: 995.77 targets/s Total_targets: 11533
+INFO:root:[STEP 1350] StepTime: 0.04 sec Speed: 1044.16 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 11 STEP 1375] Learning_rate: 0.1000 Dev_ppx: 2.48 Train_ppx: 3.63
+INFO:root:[CHECKPOINT 11 STEP 1375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 11 STEP 1375] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1380] StepTime: 0.04 sec Speed: 1057.37 targets/s Total_targets: 11533
+INFO:root:[STEP 1410] StepTime: 0.04 sec Speed: 1134.01 targets/s Total_targets: 11533
+INFO:root:[STEP 1440] StepTime: 0.04 sec Speed: 1123.30 targets/s Total_targets: 11533
+INFO:root:[STEP 1470] StepTime: 0.04 sec Speed: 1092.21 targets/s Total_targets: 11533
+INFO:root:[STEP 1500] StepTime: 0.04 sec Speed: 1117.44 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 12 STEP 1500] Learning_rate: 0.1000 Dev_ppx: 2.00 Train_ppx: 3.38
+INFO:root:[CHECKPOINT 12 STEP 1500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 12 STEP 1500] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1530] StepTime: 0.04 sec Speed: 1211.27 targets/s Total_targets: 11533
+INFO:root:[STEP 1560] StepTime: 0.04 sec Speed: 1311.00 targets/s Total_targets: 11533
+INFO:root:[STEP 1590] StepTime: 0.04 sec Speed: 1272.69 targets/s Total_targets: 11533
+INFO:root:[STEP 1620] StepTime: 0.04 sec Speed: 1211.95 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 13 STEP 1625] Learning_rate: 0.1000 Dev_ppx: 2.00 Train_ppx: 2.92
+INFO:root:[CHECKPOINT 13 STEP 1625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 13 STEP 1625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1650] StepTime: 0.03 sec Speed: 1189.50 targets/s Total_targets: 11533
+INFO:root:[STEP 1680] StepTime: 0.03 sec Speed: 1208.93 targets/s Total_targets: 11533
+INFO:root:[STEP 1710] StepTime: 0.04 sec Speed: 1218.35 targets/s Total_targets: 11533
+INFO:root:[STEP 1740] StepTime: 0.04 sec Speed: 1339.06 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 14 STEP 1750] Learning_rate: 0.1000 Dev_ppx: 1.61 Train_ppx: 2.66
+INFO:root:[CHECKPOINT 14 STEP 1750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 14 STEP 1750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1770] StepTime: 0.04 sec Speed: 1287.01 targets/s Total_targets: 11533
+INFO:root:[STEP 1800] StepTime: 0.04 sec Speed: 1244.40 targets/s Total_targets: 11533
+INFO:root:[STEP 1830] StepTime: 0.04 sec Speed: 1277.79 targets/s Total_targets: 11533
+INFO:root:[STEP 1860] StepTime: 0.04 sec Speed: 1317.15 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 15 STEP 1875] Learning_rate: 0.1000 Dev_ppx: 1.46 Train_ppx: 2.45
+INFO:root:[CHECKPOINT 15 STEP 1875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 15 STEP 1875] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 1890] StepTime: 0.04 sec Speed: 1277.72 targets/s Total_targets: 11533
+INFO:root:[STEP 1920] StepTime: 0.04 sec Speed: 1294.36 targets/s Total_targets: 11533
+INFO:root:[STEP 1950] StepTime: 0.04 sec Speed: 1313.95 targets/s Total_targets: 11533
+INFO:root:[STEP 1980] StepTime: 0.04 sec Speed: 1326.23 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 16 STEP 2000] Learning_rate: 0.1000 Dev_ppx: 1.34 Train_ppx: 2.27
+INFO:root:[CHECKPOINT 16 STEP 2000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 16 STEP 2000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 2010] StepTime: 0.04 sec Speed: 1279.48 targets/s Total_targets: 11533
+INFO:root:[STEP 2040] StepTime: 0.04 sec Speed: 1244.52 targets/s Total_targets: 11533
+INFO:root:[STEP 2070] StepTime: 0.04 sec Speed: 1205.74 targets/s Total_targets: 11533
+INFO:root:[STEP 2100] StepTime: 0.03 sec Speed: 1240.41 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 17 STEP 2125] Learning_rate: 0.1000 Dev_ppx: 1.24 Train_ppx: 2.07
+INFO:root:[CHECKPOINT 17 STEP 2125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 17 STEP 2125] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 2130] StepTime: 0.05 sec Speed: 824.08 targets/s Total_targets: 11533
+INFO:root:[STEP 2160] StepTime: 0.10 sec Speed: 483.15 targets/s Total_targets: 11533
+INFO:root:[STEP 2190] StepTime: 0.09 sec Speed: 550.02 targets/s Total_targets: 11533
+INFO:root:[STEP 2220] StepTime: 0.08 sec Speed: 517.73 targets/s Total_targets: 11533
+INFO:root:[STEP 2250] StepTime: 0.08 sec Speed: 594.44 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 18 STEP 2250] Learning_rate: 0.1000 Dev_ppx: 1.25 Train_ppx: 1.96
+INFO:root:[CHECKPOINT 18 STEP 2250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 2280] StepTime: 0.04 sec Speed: 1180.57 targets/s Total_targets: 11533
+INFO:root:[STEP 2310] StepTime: 0.04 sec Speed: 1130.33 targets/s Total_targets: 11533
+INFO:root:[STEP 2340] StepTime: 0.04 sec Speed: 1105.21 targets/s Total_targets: 11533
+INFO:root:[STEP 2370] StepTime: 0.04 sec Speed: 1145.65 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 19 STEP 2375] Learning_rate: 0.1000 Dev_ppx: 1.32 Train_ppx: 1.93
+INFO:root:[CHECKPOINT 19 STEP 2375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 2400] StepTime: 0.04 sec Speed: 1160.42 targets/s Total_targets: 11533
+INFO:root:[STEP 2430] StepTime: 0.04 sec Speed: 1117.20 targets/s Total_targets: 11533
+INFO:root:[STEP 2460] StepTime: 0.04 sec Speed: 1234.84 targets/s Total_targets: 11533
+INFO:root:[STEP 2490] StepTime: 0.04 sec Speed: 1336.57 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 20 STEP 2500] Learning_rate: 0.1000 Dev_ppx: 1.17 Train_ppx: 1.82
+INFO:root:[CHECKPOINT 20 STEP 2500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 20 STEP 2500] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 2520] StepTime: 0.04 sec Speed: 1338.41 targets/s Total_targets: 11533
+INFO:root:[STEP 2550] StepTime: 0.04 sec Speed: 1245.23 targets/s Total_targets: 11533
+INFO:root:[STEP 2580] StepTime: 0.04 sec Speed: 1303.44 targets/s Total_targets: 11533
+INFO:root:[STEP 2610] StepTime: 0.03 sec Speed: 1297.01 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 21 STEP 2625] Learning_rate: 0.1000 Dev_ppx: 1.19 Train_ppx: 1.72
+INFO:root:[CHECKPOINT 21 STEP 2625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 2640] StepTime: 0.04 sec Speed: 1266.68 targets/s Total_targets: 11533
+INFO:root:[STEP 2670] StepTime: 0.03 sec Speed: 1304.72 targets/s Total_targets: 11533
+INFO:root:[STEP 2700] StepTime: 0.04 sec Speed: 1323.39 targets/s Total_targets: 11533
+INFO:root:[STEP 2730] StepTime: 0.04 sec Speed: 1332.85 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 22 STEP 2750] Learning_rate: 0.1000 Dev_ppx: 1.09 Train_ppx: 1.69
+INFO:root:[CHECKPOINT 22 STEP 2750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 22 STEP 2750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 2760] StepTime: 0.04 sec Speed: 1334.00 targets/s Total_targets: 11533
+INFO:root:[STEP 2790] StepTime: 0.04 sec Speed: 1307.06 targets/s Total_targets: 11533
+INFO:root:[STEP 2820] StepTime: 0.04 sec Speed: 1340.30 targets/s Total_targets: 11533
+INFO:root:[STEP 2850] StepTime: 0.03 sec Speed: 1262.94 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 23 STEP 2875] Learning_rate: 0.1000 Dev_ppx: 1.12 Train_ppx: 1.57
+INFO:root:[CHECKPOINT 23 STEP 2875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 2880] StepTime: 0.04 sec Speed: 1229.28 targets/s Total_targets: 11533
+INFO:root:[STEP 2910] StepTime: 0.04 sec Speed: 1345.64 targets/s Total_targets: 11533
+INFO:root:[STEP 2940] StepTime: 0.04 sec Speed: 1286.67 targets/s Total_targets: 11533
+INFO:root:[STEP 2970] StepTime: 0.04 sec Speed: 1281.19 targets/s Total_targets: 11533
+INFO:root:[STEP 3000] StepTime: 0.03 sec Speed: 1264.82 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 24 STEP 3000] Learning_rate: 0.1000 Dev_ppx: 1.10 Train_ppx: 1.56
+INFO:root:[CHECKPOINT 24 STEP 3000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3030] StepTime: 0.04 sec Speed: 1248.31 targets/s Total_targets: 11533
+INFO:root:[STEP 3060] StepTime: 0.04 sec Speed: 1192.37 targets/s Total_targets: 11533
+INFO:root:[STEP 3090] StepTime: 0.04 sec Speed: 1244.75 targets/s Total_targets: 11533
+INFO:root:[STEP 3120] StepTime: 0.04 sec Speed: 1153.72 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 25 STEP 3125] Learning_rate: 0.1000 Dev_ppx: 1.04 Train_ppx: 1.50
+INFO:root:[CHECKPOINT 25 STEP 3125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 25 STEP 3125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 3150] StepTime: 0.05 sec Speed: 1124.00 targets/s Total_targets: 11533
+INFO:root:[STEP 3180] StepTime: 0.04 sec Speed: 1191.73 targets/s Total_targets: 11533
+INFO:root:[STEP 3210] StepTime: 0.04 sec Speed: 1280.66 targets/s Total_targets: 11533
+INFO:root:[STEP 3240] StepTime: 0.04 sec Speed: 1357.63 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 26 STEP 3250] Learning_rate: 0.1000 Dev_ppx: 1.07 Train_ppx: 1.43
+INFO:root:[CHECKPOINT 26 STEP 3250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3270] StepTime: 0.04 sec Speed: 1311.83 targets/s Total_targets: 11533
+INFO:root:[STEP 3300] StepTime: 0.03 sec Speed: 1287.68 targets/s Total_targets: 11533
+INFO:root:[STEP 3330] StepTime: 0.03 sec Speed: 1311.17 targets/s Total_targets: 11533
+INFO:root:[STEP 3360] StepTime: 0.04 sec Speed: 1281.03 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 27 STEP 3375] Learning_rate: 0.1000 Dev_ppx: 1.06 Train_ppx: 1.41
+INFO:root:[CHECKPOINT 27 STEP 3375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3390] StepTime: 0.03 sec Speed: 1236.87 targets/s Total_targets: 11533
+INFO:root:[STEP 3420] StepTime: 0.03 sec Speed: 1323.32 targets/s Total_targets: 11533
+INFO:root:[STEP 3450] StepTime: 0.04 sec Speed: 1406.66 targets/s Total_targets: 11533
+INFO:root:[STEP 3480] StepTime: 0.04 sec Speed: 1294.87 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 28 STEP 3500] Learning_rate: 0.1000 Dev_ppx: 1.61 Train_ppx: 1.41
+INFO:root:[CHECKPOINT 28 STEP 3500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3510] StepTime: 0.03 sec Speed: 1182.78 targets/s Total_targets: 11533
+INFO:root:[STEP 3540] StepTime: 0.03 sec Speed: 1257.58 targets/s Total_targets: 11533
+INFO:root:[STEP 3570] StepTime: 0.03 sec Speed: 1196.65 targets/s Total_targets: 11533
+INFO:root:[STEP 3600] StepTime: 0.04 sec Speed: 1318.19 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 29 STEP 3625] Learning_rate: 0.1000 Dev_ppx: 1.07 Train_ppx: 1.38
+INFO:root:[CHECKPOINT 29 STEP 3625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3630] StepTime: 0.04 sec Speed: 1342.85 targets/s Total_targets: 11533
+INFO:root:[STEP 3660] StepTime: 0.04 sec Speed: 1351.64 targets/s Total_targets: 11533
+INFO:root:[STEP 3690] StepTime: 0.04 sec Speed: 1381.72 targets/s Total_targets: 11533
+INFO:root:[STEP 3720] StepTime: 0.04 sec Speed: 1327.55 targets/s Total_targets: 11533
+INFO:root:[STEP 3750] StepTime: 0.04 sec Speed: 1280.10 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 30 STEP 3750] Learning_rate: 0.1000 Dev_ppx: 1.04 Train_ppx: 1.36
+INFO:root:[CHECKPOINT 30 STEP 3750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 30 STEP 3750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 3780] StepTime: 0.04 sec Speed: 1290.57 targets/s Total_targets: 11533
+INFO:root:[STEP 3810] StepTime: 0.03 sec Speed: 1255.55 targets/s Total_targets: 11533
+INFO:root:[STEP 3840] StepTime: 0.04 sec Speed: 1376.11 targets/s Total_targets: 11533
+INFO:root:[STEP 3870] StepTime: 0.03 sec Speed: 1276.66 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 31 STEP 3875] Learning_rate: 0.1000 Dev_ppx: 1.05 Train_ppx: 1.32
+INFO:root:[CHECKPOINT 31 STEP 3875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 3900] StepTime: 0.03 sec Speed: 1288.27 targets/s Total_targets: 11533
+INFO:root:[STEP 3930] StepTime: 0.04 sec Speed: 1317.69 targets/s Total_targets: 11533
+INFO:root:[STEP 3960] StepTime: 0.04 sec Speed: 1251.14 targets/s Total_targets: 11533
+INFO:root:[STEP 3990] StepTime: 0.04 sec Speed: 1185.99 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 32 STEP 4000] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.29
+INFO:root:[CHECKPOINT 32 STEP 4000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 32 STEP 4000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 4020] StepTime: 0.04 sec Speed: 1177.27 targets/s Total_targets: 11533
+INFO:root:[STEP 4050] StepTime: 0.04 sec Speed: 1174.05 targets/s Total_targets: 11533
+INFO:root:[STEP 4080] StepTime: 0.04 sec Speed: 1173.17 targets/s Total_targets: 11533
+INFO:root:[STEP 4110] StepTime: 0.04 sec Speed: 1183.03 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 33 STEP 4125] Learning_rate: 0.1000 Dev_ppx: 1.07 Train_ppx: 1.29
+INFO:root:[CHECKPOINT 33 STEP 4125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4140] StepTime: 0.04 sec Speed: 1248.09 targets/s Total_targets: 11533
+INFO:root:[STEP 4170] StepTime: 0.04 sec Speed: 1320.64 targets/s Total_targets: 11533
+INFO:root:[STEP 4200] StepTime: 0.03 sec Speed: 1340.54 targets/s Total_targets: 11533
+INFO:root:[STEP 4230] StepTime: 0.04 sec Speed: 1327.88 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 34 STEP 4250] Learning_rate: 0.1000 Dev_ppx: 1.06 Train_ppx: 1.25
+INFO:root:[CHECKPOINT 34 STEP 4250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4260] StepTime: 0.03 sec Speed: 1295.64 targets/s Total_targets: 11533
+INFO:root:[STEP 4290] StepTime: 0.03 sec Speed: 1194.22 targets/s Total_targets: 11533
+INFO:root:[STEP 4320] StepTime: 0.04 sec Speed: 1306.84 targets/s Total_targets: 11533
+INFO:root:[STEP 4350] StepTime: 0.03 sec Speed: 1296.81 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 35 STEP 4375] Learning_rate: 0.1000 Dev_ppx: 1.01 Train_ppx: 1.23
+INFO:root:[CHECKPOINT 35 STEP 4375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 35 STEP 4375] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 4380] StepTime: 0.04 sec Speed: 1267.08 targets/s Total_targets: 11533
+INFO:root:[STEP 4410] StepTime: 0.04 sec Speed: 1403.34 targets/s Total_targets: 11533
+INFO:root:[STEP 4440] StepTime: 0.04 sec Speed: 1316.70 targets/s Total_targets: 11533
+INFO:root:[STEP 4470] StepTime: 0.04 sec Speed: 1286.28 targets/s Total_targets: 11533
+INFO:root:[STEP 4500] StepTime: 0.04 sec Speed: 1256.02 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 36 STEP 4500] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.22
+INFO:root:[CHECKPOINT 36 STEP 4500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4530] StepTime: 0.04 sec Speed: 1276.73 targets/s Total_targets: 11533
+INFO:root:[STEP 4560] StepTime: 0.04 sec Speed: 1288.55 targets/s Total_targets: 11533
+INFO:root:[STEP 4590] StepTime: 0.03 sec Speed: 1252.51 targets/s Total_targets: 11533
+INFO:root:[STEP 4620] StepTime: 0.04 sec Speed: 1159.52 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 37 STEP 4625] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.22
+INFO:root:[CHECKPOINT 37 STEP 4625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4650] StepTime: 0.04 sec Speed: 1173.94 targets/s Total_targets: 11533
+INFO:root:[STEP 4680] StepTime: 0.04 sec Speed: 1324.98 targets/s Total_targets: 11533
+INFO:root:[STEP 4710] StepTime: 0.04 sec Speed: 1294.38 targets/s Total_targets: 11533
+INFO:root:[STEP 4740] StepTime: 0.03 sec Speed: 1278.85 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 38 STEP 4750] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.21
+INFO:root:[CHECKPOINT 38 STEP 4750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4770] StepTime: 0.04 sec Speed: 1266.61 targets/s Total_targets: 11533
+INFO:root:[STEP 4800] StepTime: 0.04 sec Speed: 1302.56 targets/s Total_targets: 11533
+INFO:root:[STEP 4830] StepTime: 0.04 sec Speed: 1270.63 targets/s Total_targets: 11533
+INFO:root:[STEP 4860] StepTime: 0.04 sec Speed: 1287.48 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 39 STEP 4875] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.20
+INFO:root:[CHECKPOINT 39 STEP 4875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 4890] StepTime: 0.04 sec Speed: 1276.35 targets/s Total_targets: 11533
+INFO:root:[STEP 4920] StepTime: 0.03 sec Speed: 1264.75 targets/s Total_targets: 11533
+INFO:root:[STEP 4950] StepTime: 0.04 sec Speed: 1260.67 targets/s Total_targets: 11533
+INFO:root:[STEP 4980] StepTime: 0.03 sec Speed: 1301.47 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 40 STEP 5000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.19
+INFO:root:[CHECKPOINT 40 STEP 5000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 40 STEP 5000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 5010] StepTime: 0.04 sec Speed: 1267.08 targets/s Total_targets: 11533
+INFO:root:[STEP 5040] StepTime: 0.04 sec Speed: 1258.67 targets/s Total_targets: 11533
+INFO:root:[STEP 5070] StepTime: 0.04 sec Speed: 1249.67 targets/s Total_targets: 11533
+INFO:root:[STEP 5100] StepTime: 0.04 sec Speed: 1295.06 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 41 STEP 5125] Learning_rate: 0.1000 Dev_ppx: 1.07 Train_ppx: 1.17
+INFO:root:[CHECKPOINT 41 STEP 5125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5130] StepTime: 0.03 sec Speed: 1237.03 targets/s Total_targets: 11533
+INFO:root:[STEP 5160] StepTime: 0.04 sec Speed: 1301.05 targets/s Total_targets: 11533
+INFO:root:[STEP 5190] StepTime: 0.04 sec Speed: 1326.32 targets/s Total_targets: 11533
+INFO:root:[STEP 5220] StepTime: 0.03 sec Speed: 1223.71 targets/s Total_targets: 11533
+INFO:root:[STEP 5250] StepTime: 0.03 sec Speed: 1241.87 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 42 STEP 5250] Learning_rate: 0.1000 Dev_ppx: 1.02 Train_ppx: 1.15
+INFO:root:[CHECKPOINT 42 STEP 5250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5280] StepTime: 0.03 sec Speed: 1359.01 targets/s Total_targets: 11533
+INFO:root:[STEP 5310] StepTime: 0.04 sec Speed: 1361.44 targets/s Total_targets: 11533
+INFO:root:[STEP 5340] StepTime: 0.04 sec Speed: 1263.94 targets/s Total_targets: 11533
+INFO:root:[STEP 5370] StepTime: 0.03 sec Speed: 1188.96 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 43 STEP 5375] Learning_rate: 0.1000 Dev_ppx: 1.01 Train_ppx: 1.16
+INFO:root:[CHECKPOINT 43 STEP 5375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5400] StepTime: 0.04 sec Speed: 1313.23 targets/s Total_targets: 11533
+INFO:root:[STEP 5430] StepTime: 0.04 sec Speed: 1360.51 targets/s Total_targets: 11533
+INFO:root:[STEP 5460] StepTime: 0.04 sec Speed: 1292.27 targets/s Total_targets: 11533
+INFO:root:[STEP 5490] StepTime: 0.04 sec Speed: 1267.46 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 44 STEP 5500] Learning_rate: 0.1000 Dev_ppx: 1.09 Train_ppx: 1.16
+INFO:root:[CHECKPOINT 44 STEP 5500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5520] StepTime: 0.04 sec Speed: 1305.16 targets/s Total_targets: 11533
+INFO:root:[STEP 5550] StepTime: 0.03 sec Speed: 1231.72 targets/s Total_targets: 11533
+INFO:root:[STEP 5580] StepTime: 0.04 sec Speed: 1307.94 targets/s Total_targets: 11533
+INFO:root:[STEP 5610] StepTime: 0.03 sec Speed: 1222.64 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 45 STEP 5625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.15
+INFO:root:[CHECKPOINT 45 STEP 5625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5640] StepTime: 0.04 sec Speed: 1124.87 targets/s Total_targets: 11533
+INFO:root:[STEP 5670] StepTime: 0.04 sec Speed: 1210.08 targets/s Total_targets: 11533
+INFO:root:[STEP 5700] StepTime: 0.04 sec Speed: 1317.74 targets/s Total_targets: 11533
+INFO:root:[STEP 5730] StepTime: 0.03 sec Speed: 1307.46 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 46 STEP 5750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.13
+INFO:root:[CHECKPOINT 46 STEP 5750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 46 STEP 5750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 5760] StepTime: 0.05 sec Speed: 1141.20 targets/s Total_targets: 11533
+INFO:root:[STEP 5790] StepTime: 0.04 sec Speed: 1108.36 targets/s Total_targets: 11533
+INFO:root:[STEP 5820] StepTime: 0.04 sec Speed: 1170.87 targets/s Total_targets: 11533
+INFO:root:[STEP 5850] StepTime: 0.04 sec Speed: 1243.26 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 47 STEP 5875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.14
+INFO:root:[CHECKPOINT 47 STEP 5875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 5880] StepTime: 0.03 sec Speed: 1189.37 targets/s Total_targets: 11533
+INFO:root:[STEP 5910] StepTime: 0.04 sec Speed: 1164.35 targets/s Total_targets: 11533
+INFO:root:[STEP 5940] StepTime: 0.04 sec Speed: 1286.91 targets/s Total_targets: 11533
+INFO:root:[STEP 5970] StepTime: 0.04 sec Speed: 1088.64 targets/s Total_targets: 11533
+INFO:root:[STEP 6000] StepTime: 0.04 sec Speed: 1235.06 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 48 STEP 6000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.12
+INFO:root:[CHECKPOINT 48 STEP 6000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6030] StepTime: 0.03 sec Speed: 1251.21 targets/s Total_targets: 11533
+INFO:root:[STEP 6060] StepTime: 0.04 sec Speed: 1311.13 targets/s Total_targets: 11533
+INFO:root:[STEP 6090] StepTime: 0.04 sec Speed: 1240.44 targets/s Total_targets: 11533
+INFO:root:[STEP 6120] StepTime: 0.03 sec Speed: 1186.45 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 49 STEP 6125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.13
+INFO:root:[CHECKPOINT 49 STEP 6125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6150] StepTime: 0.04 sec Speed: 1228.95 targets/s Total_targets: 11533
+INFO:root:[STEP 6180] StepTime: 0.03 sec Speed: 1226.07 targets/s Total_targets: 11533
+INFO:root:[STEP 6210] StepTime: 0.04 sec Speed: 1327.14 targets/s Total_targets: 11533
+INFO:root:[STEP 6240] StepTime: 0.04 sec Speed: 1276.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 50 STEP 6250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.12
+INFO:root:[CHECKPOINT 50 STEP 6250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6270] StepTime: 0.03 sec Speed: 1194.15 targets/s Total_targets: 11533
+INFO:root:[STEP 6300] StepTime: 0.04 sec Speed: 1225.92 targets/s Total_targets: 11533
+INFO:root:[STEP 6330] StepTime: 0.04 sec Speed: 1281.68 targets/s Total_targets: 11533
+INFO:root:[STEP 6360] StepTime: 0.04 sec Speed: 1325.77 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 51 STEP 6375] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.10
+INFO:root:[CHECKPOINT 51 STEP 6375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6390] StepTime: 0.04 sec Speed: 1309.80 targets/s Total_targets: 11533
+INFO:root:[STEP 6420] StepTime: 0.04 sec Speed: 1302.35 targets/s Total_targets: 11533
+INFO:root:[STEP 6450] StepTime: 0.04 sec Speed: 1254.15 targets/s Total_targets: 11533
+INFO:root:[STEP 6480] StepTime: 0.03 sec Speed: 1329.94 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 52 STEP 6500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.10
+INFO:root:[CHECKPOINT 52 STEP 6500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 52 STEP 6500] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 6510] StepTime: 0.04 sec Speed: 1259.12 targets/s Total_targets: 11533
+INFO:root:[STEP 6540] StepTime: 0.04 sec Speed: 1329.60 targets/s Total_targets: 11533
+INFO:root:[STEP 6570] StepTime: 0.04 sec Speed: 1200.17 targets/s Total_targets: 11533
+INFO:root:[STEP 6600] StepTime: 0.04 sec Speed: 1227.89 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 53 STEP 6625] Learning_rate: 0.1000 Dev_ppx: 1.02 Train_ppx: 1.11
+INFO:root:[CHECKPOINT 53 STEP 6625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6630] StepTime: 0.04 sec Speed: 1156.00 targets/s Total_targets: 11533
+INFO:root:[STEP 6660] StepTime: 0.04 sec Speed: 1104.64 targets/s Total_targets: 11533
+INFO:root:[STEP 6690] StepTime: 0.04 sec Speed: 1038.31 targets/s Total_targets: 11533
+INFO:root:[STEP 6720] StepTime: 0.05 sec Speed: 1068.99 targets/s Total_targets: 11533
+INFO:root:[STEP 6750] StepTime: 0.04 sec Speed: 1113.41 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 54 STEP 6750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.09
+INFO:root:[CHECKPOINT 54 STEP 6750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 6780] StepTime: 0.04 sec Speed: 1231.85 targets/s Total_targets: 11533
+INFO:root:[STEP 6810] StepTime: 0.04 sec Speed: 1166.63 targets/s Total_targets: 11533
+INFO:root:[STEP 6840] StepTime: 0.05 sec Speed: 1178.10 targets/s Total_targets: 11533
+INFO:root:[STEP 6870] StepTime: 0.04 sec Speed: 1070.75 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 55 STEP 6875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.11
+INFO:root:[CHECKPOINT 55 STEP 6875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 55 STEP 6875] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 6900] StepTime: 0.04 sec Speed: 1118.68 targets/s Total_targets: 11533
+INFO:root:[STEP 6930] StepTime: 0.04 sec Speed: 1200.20 targets/s Total_targets: 11533
+INFO:root:[STEP 6960] StepTime: 0.04 sec Speed: 1127.70 targets/s Total_targets: 11533
+INFO:root:[STEP 6990] StepTime: 0.04 sec Speed: 1059.58 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 56 STEP 7000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.08
+INFO:root:[CHECKPOINT 56 STEP 7000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 56 STEP 7000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 7020] StepTime: 0.05 sec Speed: 1196.02 targets/s Total_targets: 11533
+INFO:root:[STEP 7050] StepTime: 0.04 sec Speed: 1228.77 targets/s Total_targets: 11533
+INFO:root:[STEP 7080] StepTime: 0.04 sec Speed: 1055.38 targets/s Total_targets: 11533
+INFO:root:[STEP 7110] StepTime: 0.04 sec Speed: 1182.81 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 57 STEP 7125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 57 STEP 7125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7140] StepTime: 0.04 sec Speed: 1104.77 targets/s Total_targets: 11533
+INFO:root:[STEP 7170] StepTime: 0.04 sec Speed: 1116.29 targets/s Total_targets: 11533
+INFO:root:[STEP 7200] StepTime: 0.04 sec Speed: 1125.76 targets/s Total_targets: 11533
+INFO:root:[STEP 7230] StepTime: 0.04 sec Speed: 1078.86 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 58 STEP 7250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.09
+INFO:root:[CHECKPOINT 58 STEP 7250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7260] StepTime: 0.03 sec Speed: 1175.62 targets/s Total_targets: 11533
+INFO:root:[STEP 7290] StepTime: 0.04 sec Speed: 1280.94 targets/s Total_targets: 11533
+INFO:root:[STEP 7320] StepTime: 0.03 sec Speed: 1309.58 targets/s Total_targets: 11533
+INFO:root:[STEP 7350] StepTime: 0.03 sec Speed: 1254.94 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 59 STEP 7375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 59 STEP 7375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7380] StepTime: 0.04 sec Speed: 1103.47 targets/s Total_targets: 11533
+INFO:root:[STEP 7410] StepTime: 0.04 sec Speed: 1073.33 targets/s Total_targets: 11533
+INFO:root:[STEP 7440] StepTime: 0.04 sec Speed: 1106.31 targets/s Total_targets: 11533
+INFO:root:[STEP 7470] StepTime: 0.04 sec Speed: 1178.59 targets/s Total_targets: 11533
+INFO:root:[STEP 7500] StepTime: 0.05 sec Speed: 1131.58 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 60 STEP 7500] Learning_rate: 0.1000 Dev_ppx: 1.01 Train_ppx: 1.09
+INFO:root:[CHECKPOINT 60 STEP 7500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7530] StepTime: 0.04 sec Speed: 1136.96 targets/s Total_targets: 11533
+INFO:root:[STEP 7560] StepTime: 0.04 sec Speed: 1135.17 targets/s Total_targets: 11533
+INFO:root:[STEP 7590] StepTime: 0.04 sec Speed: 1265.75 targets/s Total_targets: 11533
+INFO:root:[STEP 7620] StepTime: 0.04 sec Speed: 1280.63 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 61 STEP 7625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.06
+INFO:root:[CHECKPOINT 61 STEP 7625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 61 STEP 7625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 7650] StepTime: 0.03 sec Speed: 1125.55 targets/s Total_targets: 11533
+INFO:root:[STEP 7680] StepTime: 0.04 sec Speed: 1125.19 targets/s Total_targets: 11533
+INFO:root:[STEP 7710] StepTime: 0.04 sec Speed: 924.92 targets/s Total_targets: 11533
+INFO:root:[STEP 7740] StepTime: 0.05 sec Speed: 978.41 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 62 STEP 7750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 62 STEP 7750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7770] StepTime: 0.04 sec Speed: 1121.85 targets/s Total_targets: 11533
+INFO:root:[STEP 7800] StepTime: 0.04 sec Speed: 1110.34 targets/s Total_targets: 11533
+INFO:root:[STEP 7830] StepTime: 0.05 sec Speed: 1139.12 targets/s Total_targets: 11533
+INFO:root:[STEP 7860] StepTime: 0.04 sec Speed: 1154.87 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 63 STEP 7875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.09
+INFO:root:[CHECKPOINT 63 STEP 7875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 7890] StepTime: 0.04 sec Speed: 1146.34 targets/s Total_targets: 11533
+INFO:root:[STEP 7920] StepTime: 0.04 sec Speed: 1119.01 targets/s Total_targets: 11533
+INFO:root:[STEP 7950] StepTime: 0.04 sec Speed: 1137.71 targets/s Total_targets: 11533
+INFO:root:[STEP 7980] StepTime: 0.04 sec Speed: 1209.46 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 64 STEP 8000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 64 STEP 8000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 8010] StepTime: 0.04 sec Speed: 1193.27 targets/s Total_targets: 11533
+INFO:root:[STEP 8040] StepTime: 0.03 sec Speed: 1115.01 targets/s Total_targets: 11533
+INFO:root:[STEP 8070] StepTime: 0.04 sec Speed: 1154.46 targets/s Total_targets: 11533
+INFO:root:[STEP 8100] StepTime: 0.04 sec Speed: 1040.85 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 65 STEP 8125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 65 STEP 8125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 8130] StepTime: 0.05 sec Speed: 1028.31 targets/s Total_targets: 11533
+INFO:root:[STEP 8160] StepTime: 0.04 sec Speed: 1207.55 targets/s Total_targets: 11533
+INFO:root:[STEP 8190] StepTime: 0.04 sec Speed: 1230.00 targets/s Total_targets: 11533
+INFO:root:[STEP 8220] StepTime: 0.04 sec Speed: 1156.04 targets/s Total_targets: 11533
+INFO:root:[STEP 8250] StepTime: 0.04 sec Speed: 1174.82 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 66 STEP 8250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 66 STEP 8250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 8280] StepTime: 0.04 sec Speed: 1205.30 targets/s Total_targets: 11533
+INFO:root:[STEP 8310] StepTime: 0.04 sec Speed: 1136.53 targets/s Total_targets: 11533
+INFO:root:[STEP 8340] StepTime: 0.04 sec Speed: 1080.09 targets/s Total_targets: 11533
+INFO:root:[STEP 8370] StepTime: 0.04 sec Speed: 1103.40 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 67 STEP 8375] Learning_rate: 0.1000 Dev_ppx: 1.05 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 67 STEP 8375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 8400] StepTime: 0.04 sec Speed: 1141.07 targets/s Total_targets: 11533
+INFO:root:[STEP 8430] StepTime: 0.04 sec Speed: 1319.43 targets/s Total_targets: 11533
+INFO:root:[STEP 8460] StepTime: 0.04 sec Speed: 1211.32 targets/s Total_targets: 11533
+INFO:root:[STEP 8490] StepTime: 0.04 sec Speed: 1292.01 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 68 STEP 8500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 68 STEP 8500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 68 STEP 8500] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 8520] StepTime: 0.04 sec Speed: 1248.87 targets/s Total_targets: 11533
+INFO:root:[STEP 8550] StepTime: 0.04 sec Speed: 1229.40 targets/s Total_targets: 11533
+INFO:root:[STEP 8580] StepTime: 0.04 sec Speed: 1180.29 targets/s Total_targets: 11533
+INFO:root:[STEP 8610] StepTime: 0.04 sec Speed: 1217.19 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 69 STEP 8625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 69 STEP 8625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 69 STEP 8625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 8640] StepTime: 0.03 sec Speed: 1369.41 targets/s Total_targets: 11533
+INFO:root:[STEP 8670] StepTime: 0.04 sec Speed: 1318.01 targets/s Total_targets: 11533
+INFO:root:[STEP 8700] StepTime: 0.04 sec Speed: 1246.64 targets/s Total_targets: 11533
+INFO:root:[STEP 8730] StepTime: 0.04 sec Speed: 1189.02 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 70 STEP 8750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 70 STEP 8750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 70 STEP 8750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 8760] StepTime: 0.04 sec Speed: 1194.00 targets/s Total_targets: 11533
+INFO:root:[STEP 8790] StepTime: 0.04 sec Speed: 1051.67 targets/s Total_targets: 11533
+INFO:root:[STEP 8820] StepTime: 0.05 sec Speed: 1134.57 targets/s Total_targets: 11533
+INFO:root:[STEP 8850] StepTime: 0.04 sec Speed: 1090.36 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 71 STEP 8875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 71 STEP 8875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 71 STEP 8875] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 8880] StepTime: 0.04 sec Speed: 1155.05 targets/s Total_targets: 11533
+INFO:root:[STEP 8910] StepTime: 0.04 sec Speed: 1169.07 targets/s Total_targets: 11533
+INFO:root:[STEP 8940] StepTime: 0.04 sec Speed: 1136.87 targets/s Total_targets: 11533
+INFO:root:[STEP 8970] StepTime: 0.04 sec Speed: 1156.11 targets/s Total_targets: 11533
+INFO:root:[STEP 9000] StepTime: 0.04 sec Speed: 1183.61 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 72 STEP 9000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 72 STEP 9000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9030] StepTime: 0.04 sec Speed: 1138.66 targets/s Total_targets: 11533
+INFO:root:[STEP 9060] StepTime: 0.04 sec Speed: 1126.88 targets/s Total_targets: 11533
+INFO:root:[STEP 9090] StepTime: 0.04 sec Speed: 1058.85 targets/s Total_targets: 11533
+INFO:root:[STEP 9120] StepTime: 0.03 sec Speed: 1237.86 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 73 STEP 9125] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 73 STEP 9125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9150] StepTime: 0.04 sec Speed: 1258.93 targets/s Total_targets: 11533
+INFO:root:[STEP 9180] StepTime: 0.03 sec Speed: 1211.73 targets/s Total_targets: 11533
+INFO:root:[STEP 9210] StepTime: 0.04 sec Speed: 1315.15 targets/s Total_targets: 11533
+INFO:root:[STEP 9240] StepTime: 0.04 sec Speed: 1337.78 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 74 STEP 9250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 74 STEP 9250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9270] StepTime: 0.04 sec Speed: 1315.92 targets/s Total_targets: 11533
+INFO:root:[STEP 9300] StepTime: 0.03 sec Speed: 1287.87 targets/s Total_targets: 11533
+INFO:root:[STEP 9330] StepTime: 0.04 sec Speed: 1386.96 targets/s Total_targets: 11533
+INFO:root:[STEP 9360] StepTime: 0.04 sec Speed: 1285.11 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 75 STEP 9375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.06
+INFO:root:[CHECKPOINT 75 STEP 9375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9390] StepTime: 0.04 sec Speed: 1282.74 targets/s Total_targets: 11533
+INFO:root:[STEP 9420] StepTime: 0.04 sec Speed: 1302.13 targets/s Total_targets: 11533
+INFO:root:[STEP 9450] StepTime: 0.04 sec Speed: 1244.01 targets/s Total_targets: 11533
+INFO:root:[STEP 9480] StepTime: 0.04 sec Speed: 1299.23 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 76 STEP 9500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.06
+INFO:root:[CHECKPOINT 76 STEP 9500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9510] StepTime: 0.04 sec Speed: 959.71 targets/s Total_targets: 11533
+INFO:root:[STEP 9540] StepTime: 0.04 sec Speed: 1267.36 targets/s Total_targets: 11533
+INFO:root:[STEP 9570] StepTime: 0.04 sec Speed: 1235.88 targets/s Total_targets: 11533
+INFO:root:[STEP 9600] StepTime: 0.04 sec Speed: 1229.57 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 77 STEP 9625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 77 STEP 9625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 77 STEP 9625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 9630] StepTime: 0.04 sec Speed: 1247.96 targets/s Total_targets: 11533
+INFO:root:[STEP 9660] StepTime: 0.04 sec Speed: 1205.11 targets/s Total_targets: 11533
+INFO:root:[STEP 9690] StepTime: 0.04 sec Speed: 1133.69 targets/s Total_targets: 11533
+INFO:root:[STEP 9720] StepTime: 0.04 sec Speed: 1217.91 targets/s Total_targets: 11533
+INFO:root:[STEP 9750] StepTime: 0.04 sec Speed: 1232.12 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 78 STEP 9750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.07
+INFO:root:[CHECKPOINT 78 STEP 9750] Model saved using 0.00 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9780] StepTime: 0.05 sec Speed: 1206.05 targets/s Total_targets: 11533
+INFO:root:[STEP 9810] StepTime: 0.05 sec Speed: 1004.88 targets/s Total_targets: 11533
+INFO:root:[STEP 9840] StepTime: 0.05 sec Speed: 1061.43 targets/s Total_targets: 11533
+INFO:root:[STEP 9870] StepTime: 0.04 sec Speed: 1127.53 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 79 STEP 9875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 79 STEP 9875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 9900] StepTime: 0.04 sec Speed: 993.13 targets/s Total_targets: 11533
+INFO:root:[STEP 9930] StepTime: 0.04 sec Speed: 1083.47 targets/s Total_targets: 11533
+INFO:root:[STEP 9960] StepTime: 0.04 sec Speed: 1135.84 targets/s Total_targets: 11533
+INFO:root:[STEP 9990] StepTime: 0.04 sec Speed: 1251.39 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 80 STEP 10000] Learning_rate: 0.1000 Dev_ppx: 1.05 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 80 STEP 10000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10020] StepTime: 0.04 sec Speed: 1284.08 targets/s Total_targets: 11533
+INFO:root:[STEP 10050] StepTime: 0.04 sec Speed: 1294.36 targets/s Total_targets: 11533
+INFO:root:[STEP 10080] StepTime: 0.04 sec Speed: 1233.62 targets/s Total_targets: 11533
+INFO:root:[STEP 10110] StepTime: 0.04 sec Speed: 1139.82 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 81 STEP 10125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 81 STEP 10125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10140] StepTime: 0.04 sec Speed: 1092.42 targets/s Total_targets: 11533
+INFO:root:[STEP 10170] StepTime: 0.04 sec Speed: 1167.17 targets/s Total_targets: 11533
+INFO:root:[STEP 10200] StepTime: 0.04 sec Speed: 1110.98 targets/s Total_targets: 11533
+INFO:root:[STEP 10230] StepTime: 0.04 sec Speed: 1166.20 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 82 STEP 10250] Learning_rate: 0.1000 Dev_ppx: 1.03 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 82 STEP 10250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10260] StepTime: 0.04 sec Speed: 1104.01 targets/s Total_targets: 11533
+INFO:root:[STEP 10290] StepTime: 0.04 sec Speed: 1076.94 targets/s Total_targets: 11533
+INFO:root:[STEP 10320] StepTime: 0.04 sec Speed: 1110.50 targets/s Total_targets: 11533
+INFO:root:[STEP 10350] StepTime: 0.04 sec Speed: 1200.09 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 83 STEP 10375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 83 STEP 10375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10380] StepTime: 0.03 sec Speed: 1035.77 targets/s Total_targets: 11533
+INFO:root:[STEP 10410] StepTime: 0.04 sec Speed: 1137.98 targets/s Total_targets: 11533
+INFO:root:[STEP 10440] StepTime: 0.04 sec Speed: 1136.78 targets/s Total_targets: 11533
+INFO:root:[STEP 10470] StepTime: 0.04 sec Speed: 1117.31 targets/s Total_targets: 11533
+INFO:root:[STEP 10500] StepTime: 0.04 sec Speed: 1122.92 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 84 STEP 10500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 84 STEP 10500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 84 STEP 10500] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 10530] StepTime: 0.04 sec Speed: 1133.77 targets/s Total_targets: 11533
+INFO:root:[STEP 10560] StepTime: 0.03 sec Speed: 1274.76 targets/s Total_targets: 11533
+INFO:root:[STEP 10590] StepTime: 0.03 sec Speed: 1206.40 targets/s Total_targets: 11533
+INFO:root:[STEP 10620] StepTime: 0.04 sec Speed: 1153.06 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 85 STEP 10625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 85 STEP 10625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10650] StepTime: 0.04 sec Speed: 1268.31 targets/s Total_targets: 11533
+INFO:root:[STEP 10680] StepTime: 0.04 sec Speed: 1222.98 targets/s Total_targets: 11533
+INFO:root:[STEP 10710] StepTime: 0.04 sec Speed: 1288.99 targets/s Total_targets: 11533
+INFO:root:[STEP 10740] StepTime: 0.04 sec Speed: 1183.36 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 86 STEP 10750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 86 STEP 10750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 86 STEP 10750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 10770] StepTime: 0.04 sec Speed: 1130.54 targets/s Total_targets: 11533
+INFO:root:[STEP 10800] StepTime: 0.04 sec Speed: 1076.27 targets/s Total_targets: 11533
+INFO:root:[STEP 10830] StepTime: 0.04 sec Speed: 994.96 targets/s Total_targets: 11533
+INFO:root:[STEP 10860] StepTime: 0.04 sec Speed: 1061.90 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 87 STEP 10875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 87 STEP 10875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 10890] StepTime: 0.05 sec Speed: 1059.98 targets/s Total_targets: 11533
+INFO:root:[STEP 10920] StepTime: 0.05 sec Speed: 947.14 targets/s Total_targets: 11533
+INFO:root:[STEP 10950] StepTime: 0.04 sec Speed: 979.48 targets/s Total_targets: 11533
+INFO:root:[STEP 10980] StepTime: 0.05 sec Speed: 1057.12 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 88 STEP 11000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 88 STEP 11000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11010] StepTime: 0.04 sec Speed: 1155.16 targets/s Total_targets: 11533
+INFO:root:[STEP 11040] StepTime: 0.05 sec Speed: 1117.13 targets/s Total_targets: 11533
+INFO:root:[STEP 11070] StepTime: 0.04 sec Speed: 1112.59 targets/s Total_targets: 11533
+INFO:root:[STEP 11100] StepTime: 0.04 sec Speed: 1110.98 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 89 STEP 11125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 89 STEP 11125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 89 STEP 11125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 11130] StepTime: 0.04 sec Speed: 1172.57 targets/s Total_targets: 11533
+INFO:root:[STEP 11160] StepTime: 0.04 sec Speed: 1200.91 targets/s Total_targets: 11533
+INFO:root:[STEP 11190] StepTime: 0.04 sec Speed: 1146.18 targets/s Total_targets: 11533
+INFO:root:[STEP 11220] StepTime: 0.04 sec Speed: 1330.12 targets/s Total_targets: 11533
+INFO:root:[STEP 11250] StepTime: 0.04 sec Speed: 1275.45 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 90 STEP 11250] Learning_rate: 0.1000 Dev_ppx: 1.14 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 90 STEP 11250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11280] StepTime: 0.04 sec Speed: 1055.47 targets/s Total_targets: 11533
+INFO:root:[STEP 11310] StepTime: 0.05 sec Speed: 1024.92 targets/s Total_targets: 11533
+INFO:root:[STEP 11340] StepTime: 0.04 sec Speed: 1071.14 targets/s Total_targets: 11533
+INFO:root:[STEP 11370] StepTime: 0.04 sec Speed: 1106.25 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 91 STEP 11375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 91 STEP 11375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11400] StepTime: 0.04 sec Speed: 1123.03 targets/s Total_targets: 11533
+INFO:root:[STEP 11430] StepTime: 0.04 sec Speed: 1117.21 targets/s Total_targets: 11533
+INFO:root:[STEP 11460] StepTime: 0.04 sec Speed: 1067.15 targets/s Total_targets: 11533
+INFO:root:[STEP 11490] StepTime: 0.03 sec Speed: 1215.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 92 STEP 11500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.05
+INFO:root:[CHECKPOINT 92 STEP 11500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11520] StepTime: 0.04 sec Speed: 1197.16 targets/s Total_targets: 11533
+INFO:root:[STEP 11550] StepTime: 0.04 sec Speed: 1231.89 targets/s Total_targets: 11533
+INFO:root:[STEP 11580] StepTime: 0.04 sec Speed: 1113.42 targets/s Total_targets: 11533
+INFO:root:[STEP 11610] StepTime: 0.04 sec Speed: 1258.65 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 93 STEP 11625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 93 STEP 11625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11640] StepTime: 0.04 sec Speed: 1179.11 targets/s Total_targets: 11533
+INFO:root:[STEP 11670] StepTime: 0.04 sec Speed: 1143.86 targets/s Total_targets: 11533
+INFO:root:[STEP 11700] StepTime: 0.04 sec Speed: 1115.42 targets/s Total_targets: 11533
+INFO:root:[STEP 11730] StepTime: 0.04 sec Speed: 1108.14 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 94 STEP 11750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 94 STEP 11750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 94 STEP 11750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 11760] StepTime: 0.04 sec Speed: 1136.95 targets/s Total_targets: 11533
+INFO:root:[STEP 11790] StepTime: 0.04 sec Speed: 1189.66 targets/s Total_targets: 11533
+INFO:root:[STEP 11820] StepTime: 0.04 sec Speed: 1168.01 targets/s Total_targets: 11533
+INFO:root:[STEP 11850] StepTime: 0.04 sec Speed: 1200.00 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 95 STEP 11875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 95 STEP 11875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 11880] StepTime: 0.04 sec Speed: 1193.39 targets/s Total_targets: 11533
+INFO:root:[STEP 11910] StepTime: 0.05 sec Speed: 1217.03 targets/s Total_targets: 11533
+INFO:root:[STEP 11940] StepTime: 0.04 sec Speed: 1145.70 targets/s Total_targets: 11533
+INFO:root:[STEP 11970] StepTime: 0.04 sec Speed: 1145.87 targets/s Total_targets: 11533
+INFO:root:[STEP 12000] StepTime: 0.04 sec Speed: 1158.02 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 96 STEP 12000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 96 STEP 12000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 12030] StepTime: 0.04 sec Speed: 1190.50 targets/s Total_targets: 11533
+INFO:root:[STEP 12060] StepTime: 0.04 sec Speed: 1153.70 targets/s Total_targets: 11533
+INFO:root:[STEP 12090] StepTime: 0.04 sec Speed: 1204.83 targets/s Total_targets: 11533
+INFO:root:[STEP 12120] StepTime: 0.04 sec Speed: 1208.31 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 97 STEP 12125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 97 STEP 12125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 97 STEP 12125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 12150] StepTime: 0.03 sec Speed: 1144.57 targets/s Total_targets: 11533
+INFO:root:[STEP 12180] StepTime: 0.04 sec Speed: 1170.94 targets/s Total_targets: 11533
+INFO:root:[STEP 12210] StepTime: 0.04 sec Speed: 1345.38 targets/s Total_targets: 11533
+INFO:root:[STEP 12240] StepTime: 0.04 sec Speed: 1219.92 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 98 STEP 12250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 98 STEP 12250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 12270] StepTime: 0.04 sec Speed: 1360.30 targets/s Total_targets: 11533
+INFO:root:[STEP 12300] StepTime: 0.04 sec Speed: 1368.32 targets/s Total_targets: 11533
+INFO:root:[STEP 12330] StepTime: 0.04 sec Speed: 1284.72 targets/s Total_targets: 11533
+INFO:root:[STEP 12360] StepTime: 0.03 sec Speed: 1343.69 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 99 STEP 12375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 99 STEP 12375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 99 STEP 12375] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 12390] StepTime: 0.04 sec Speed: 1318.41 targets/s Total_targets: 11533
+INFO:root:[STEP 12420] StepTime: 0.03 sec Speed: 1267.54 targets/s Total_targets: 11533
+INFO:root:[STEP 12450] StepTime: 0.04 sec Speed: 1340.27 targets/s Total_targets: 11533
+INFO:root:[STEP 12480] StepTime: 0.03 sec Speed: 1285.52 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 100 STEP 12500] Learning_rate: 0.1000 Dev_ppx: 1.02 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 100 STEP 12500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 12510] StepTime: 0.03 sec Speed: 1242.56 targets/s Total_targets: 11533
+INFO:root:[STEP 12540] StepTime: 0.03 sec Speed: 1301.53 targets/s Total_targets: 11533
+INFO:root:[STEP 12570] StepTime: 0.04 sec Speed: 1316.11 targets/s Total_targets: 11533
+INFO:root:[STEP 12600] StepTime: 0.04 sec Speed: 1410.60 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 101 STEP 12625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 101 STEP 12625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 101 STEP 12625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 12630] StepTime: 0.03 sec Speed: 1274.85 targets/s Total_targets: 11533
+INFO:root:[STEP 12660] StepTime: 0.04 sec Speed: 1325.91 targets/s Total_targets: 11533
+INFO:root:[STEP 12690] StepTime: 0.03 sec Speed: 1278.49 targets/s Total_targets: 11533
+INFO:root:[STEP 12720] StepTime: 0.04 sec Speed: 1333.94 targets/s Total_targets: 11533
+INFO:root:[STEP 12750] StepTime: 0.04 sec Speed: 1315.04 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 102 STEP 12750] Learning_rate: 0.1000 Dev_ppx: 1.02 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 102 STEP 12750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 12780] StepTime: 0.04 sec Speed: 1345.83 targets/s Total_targets: 11533
+INFO:root:[STEP 12810] StepTime: 0.04 sec Speed: 1296.80 targets/s Total_targets: 11533
+INFO:root:[STEP 12840] StepTime: 0.04 sec Speed: 1121.61 targets/s Total_targets: 11533
+INFO:root:[STEP 12870] StepTime: 0.04 sec Speed: 1271.25 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 103 STEP 12875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 103 STEP 12875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 12900] StepTime: 0.04 sec Speed: 1141.40 targets/s Total_targets: 11533
+INFO:root:[STEP 12930] StepTime: 0.03 sec Speed: 1318.15 targets/s Total_targets: 11533
+INFO:root:[STEP 12960] StepTime: 0.04 sec Speed: 1275.27 targets/s Total_targets: 11533
+INFO:root:[STEP 12990] StepTime: 0.04 sec Speed: 1299.45 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 104 STEP 13000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 104 STEP 13000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 104 STEP 13000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 13020] StepTime: 0.04 sec Speed: 1273.02 targets/s Total_targets: 11533
+INFO:root:[STEP 13050] StepTime: 0.04 sec Speed: 1269.66 targets/s Total_targets: 11533
+INFO:root:[STEP 13080] StepTime: 0.03 sec Speed: 1207.17 targets/s Total_targets: 11533
+INFO:root:[STEP 13110] StepTime: 0.04 sec Speed: 1273.27 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 105 STEP 13125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 105 STEP 13125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 105 STEP 13125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 13140] StepTime: 0.04 sec Speed: 1220.01 targets/s Total_targets: 11533
+INFO:root:[STEP 13170] StepTime: 0.04 sec Speed: 1279.28 targets/s Total_targets: 11533
+INFO:root:[STEP 13200] StepTime: 0.04 sec Speed: 1221.99 targets/s Total_targets: 11533
+INFO:root:[STEP 13230] StepTime: 0.04 sec Speed: 1305.89 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 106 STEP 13250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 106 STEP 13250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 13260] StepTime: 0.04 sec Speed: 1251.31 targets/s Total_targets: 11533
+INFO:root:[STEP 13290] StepTime: 0.04 sec Speed: 1176.14 targets/s Total_targets: 11533
+INFO:root:[STEP 13320] StepTime: 0.04 sec Speed: 1174.75 targets/s Total_targets: 11533
+INFO:root:[STEP 13350] StepTime: 0.04 sec Speed: 1164.45 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 107 STEP 13375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 107 STEP 13375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 107 STEP 13375] Model saved using 0.01 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 13380] StepTime: 0.03 sec Speed: 1102.99 targets/s Total_targets: 11533
+INFO:root:[STEP 13410] StepTime: 0.04 sec Speed: 1259.63 targets/s Total_targets: 11533
+INFO:root:[STEP 13440] StepTime: 0.04 sec Speed: 1157.40 targets/s Total_targets: 11533
+INFO:root:[STEP 13470] StepTime: 0.04 sec Speed: 1241.98 targets/s Total_targets: 11533
+INFO:root:[STEP 13500] StepTime: 0.04 sec Speed: 1302.01 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 108 STEP 13500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 108 STEP 13500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 13530] StepTime: 0.03 sec Speed: 1232.96 targets/s Total_targets: 11533
+INFO:root:[STEP 13560] StepTime: 0.04 sec Speed: 1270.08 targets/s Total_targets: 11533
+INFO:root:[STEP 13590] StepTime: 0.04 sec Speed: 1267.22 targets/s Total_targets: 11533
+INFO:root:[STEP 13620] StepTime: 0.04 sec Speed: 1146.20 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 109 STEP 13625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 109 STEP 13625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 109 STEP 13625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 13650] StepTime: 0.04 sec Speed: 1170.27 targets/s Total_targets: 11533
+INFO:root:[STEP 13680] StepTime: 0.04 sec Speed: 1163.64 targets/s Total_targets: 11533
+INFO:root:[STEP 13710] StepTime: 0.04 sec Speed: 1118.01 targets/s Total_targets: 11533
+INFO:root:[STEP 13740] StepTime: 0.04 sec Speed: 1214.02 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 110 STEP 13750] Learning_rate: 0.1000 Dev_ppx: 1.02 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 110 STEP 13750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 13770] StepTime: 0.04 sec Speed: 1275.83 targets/s Total_targets: 11533
+INFO:root:[STEP 13800] StepTime: 0.04 sec Speed: 1349.96 targets/s Total_targets: 11533
+INFO:root:[STEP 13830] StepTime: 0.04 sec Speed: 1314.05 targets/s Total_targets: 11533
+INFO:root:[STEP 13860] StepTime: 0.05 sec Speed: 1045.47 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 111 STEP 13875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 111 STEP 13875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 13890] StepTime: 0.04 sec Speed: 1050.91 targets/s Total_targets: 11533
+INFO:root:[STEP 13920] StepTime: 0.04 sec Speed: 1182.72 targets/s Total_targets: 11533
+INFO:root:[STEP 13950] StepTime: 0.04 sec Speed: 1232.53 targets/s Total_targets: 11533
+INFO:root:[STEP 13980] StepTime: 0.04 sec Speed: 1186.70 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 112 STEP 14000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 112 STEP 14000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 112 STEP 14000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 14010] StepTime: 0.04 sec Speed: 1163.09 targets/s Total_targets: 11533
+INFO:root:[STEP 14040] StepTime: 0.04 sec Speed: 1184.67 targets/s Total_targets: 11533
+INFO:root:[STEP 14070] StepTime: 0.04 sec Speed: 1131.57 targets/s Total_targets: 11533
+INFO:root:[STEP 14100] StepTime: 0.04 sec Speed: 1227.03 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 113 STEP 14125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 113 STEP 14125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 14130] StepTime: 0.03 sec Speed: 1319.75 targets/s Total_targets: 11533
+INFO:root:[STEP 14160] StepTime: 0.03 sec Speed: 1333.23 targets/s Total_targets: 11533
+INFO:root:[STEP 14190] StepTime: 0.04 sec Speed: 1321.82 targets/s Total_targets: 11533
+INFO:root:[STEP 14220] StepTime: 0.04 sec Speed: 1258.98 targets/s Total_targets: 11533
+INFO:root:[STEP 14250] StepTime: 0.05 sec Speed: 1105.35 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 114 STEP 14250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 114 STEP 14250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 14280] StepTime: 0.04 sec Speed: 1081.93 targets/s Total_targets: 11533
+INFO:root:[STEP 14310] StepTime: 0.04 sec Speed: 1172.11 targets/s Total_targets: 11533
+INFO:root:[STEP 14340] StepTime: 0.04 sec Speed: 1207.53 targets/s Total_targets: 11533
+INFO:root:[STEP 14370] StepTime: 0.04 sec Speed: 1321.63 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 115 STEP 14375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 115 STEP 14375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 14400] StepTime: 0.04 sec Speed: 1255.29 targets/s Total_targets: 11533
+INFO:root:[STEP 14430] StepTime: 0.03 sec Speed: 1305.77 targets/s Total_targets: 11533
+INFO:root:[STEP 14460] StepTime: 0.04 sec Speed: 1305.07 targets/s Total_targets: 11533
+INFO:root:[STEP 14490] StepTime: 0.03 sec Speed: 1320.06 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 116 STEP 14500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 116 STEP 14500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 14520] StepTime: 0.04 sec Speed: 1324.50 targets/s Total_targets: 11533
+INFO:root:[STEP 14550] StepTime: 0.04 sec Speed: 1304.80 targets/s Total_targets: 11533
+INFO:root:[STEP 14580] StepTime: 0.03 sec Speed: 1304.52 targets/s Total_targets: 11533
+INFO:root:[STEP 14610] StepTime: 0.03 sec Speed: 1337.73 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 117 STEP 14625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 117 STEP 14625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 117 STEP 14625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 14640] StepTime: 0.04 sec Speed: 1324.56 targets/s Total_targets: 11533
+INFO:root:[STEP 14670] StepTime: 0.04 sec Speed: 1286.55 targets/s Total_targets: 11533
+INFO:root:[STEP 14700] StepTime: 0.03 sec Speed: 1367.60 targets/s Total_targets: 11533
+INFO:root:[STEP 14730] StepTime: 0.03 sec Speed: 1320.49 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 118 STEP 14750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 118 STEP 14750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 14760] StepTime: 0.04 sec Speed: 1323.46 targets/s Total_targets: 11533
+INFO:root:[STEP 14790] StepTime: 0.04 sec Speed: 1288.09 targets/s Total_targets: 11533
+INFO:root:[STEP 14820] StepTime: 0.04 sec Speed: 1369.77 targets/s Total_targets: 11533
+INFO:root:[STEP 14850] StepTime: 0.03 sec Speed: 1328.85 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 119 STEP 14875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 119 STEP 14875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 119 STEP 14875] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 14880] StepTime: 0.04 sec Speed: 1321.42 targets/s Total_targets: 11533
+INFO:root:[STEP 14910] StepTime: 0.03 sec Speed: 1386.58 targets/s Total_targets: 11533
+INFO:root:[STEP 14940] StepTime: 0.04 sec Speed: 1340.78 targets/s Total_targets: 11533
+INFO:root:[STEP 14970] StepTime: 0.04 sec Speed: 1323.26 targets/s Total_targets: 11533
+INFO:root:[STEP 15000] StepTime: 0.04 sec Speed: 1385.87 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 120 STEP 15000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 120 STEP 15000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15030] StepTime: 0.03 sec Speed: 1279.54 targets/s Total_targets: 11533
+INFO:root:[STEP 15060] StepTime: 0.04 sec Speed: 1362.92 targets/s Total_targets: 11533
+INFO:root:[STEP 15090] StepTime: 0.03 sec Speed: 1325.46 targets/s Total_targets: 11533
+INFO:root:[STEP 15120] StepTime: 0.04 sec Speed: 1330.75 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 121 STEP 15125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 121 STEP 15125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15150] StepTime: 0.04 sec Speed: 1326.90 targets/s Total_targets: 11533
+INFO:root:[STEP 15180] StepTime: 0.03 sec Speed: 1310.22 targets/s Total_targets: 11533
+INFO:root:[STEP 15210] StepTime: 0.03 sec Speed: 1315.03 targets/s Total_targets: 11533
+INFO:root:[STEP 15240] StepTime: 0.03 sec Speed: 1260.04 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 122 STEP 15250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 122 STEP 15250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 122 STEP 15250] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 15270] StepTime: 0.04 sec Speed: 1350.13 targets/s Total_targets: 11533
+INFO:root:[STEP 15300] StepTime: 0.03 sec Speed: 1294.88 targets/s Total_targets: 11533
+INFO:root:[STEP 15330] StepTime: 0.04 sec Speed: 1356.33 targets/s Total_targets: 11533
+INFO:root:[STEP 15360] StepTime: 0.04 sec Speed: 1360.99 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 123 STEP 15375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 123 STEP 15375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 123 STEP 15375] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 15390] StepTime: 0.04 sec Speed: 1270.94 targets/s Total_targets: 11533
+INFO:root:[STEP 15420] StepTime: 0.04 sec Speed: 1349.25 targets/s Total_targets: 11533
+INFO:root:[STEP 15450] StepTime: 0.04 sec Speed: 1389.12 targets/s Total_targets: 11533
+INFO:root:[STEP 15480] StepTime: 0.04 sec Speed: 1284.14 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 124 STEP 15500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 124 STEP 15500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15510] StepTime: 0.03 sec Speed: 1215.55 targets/s Total_targets: 11533
+INFO:root:[STEP 15540] StepTime: 0.03 sec Speed: 1298.47 targets/s Total_targets: 11533
+INFO:root:[STEP 15570] StepTime: 0.03 sec Speed: 1205.57 targets/s Total_targets: 11533
+INFO:root:[STEP 15600] StepTime: 0.04 sec Speed: 1370.46 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 125 STEP 15625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 125 STEP 15625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15630] StepTime: 0.03 sec Speed: 1358.94 targets/s Total_targets: 11533
+INFO:root:[STEP 15660] StepTime: 0.03 sec Speed: 1237.03 targets/s Total_targets: 11533
+INFO:root:[STEP 15690] StepTime: 0.04 sec Speed: 1275.51 targets/s Total_targets: 11533
+INFO:root:[STEP 15720] StepTime: 0.03 sec Speed: 1324.81 targets/s Total_targets: 11533
+INFO:root:[STEP 15750] StepTime: 0.04 sec Speed: 1283.70 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 126 STEP 15750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 126 STEP 15750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15780] StepTime: 0.04 sec Speed: 1387.76 targets/s Total_targets: 11533
+INFO:root:[STEP 15810] StepTime: 0.04 sec Speed: 1284.31 targets/s Total_targets: 11533
+INFO:root:[STEP 15840] StepTime: 0.04 sec Speed: 1311.40 targets/s Total_targets: 11533
+INFO:root:[STEP 15870] StepTime: 0.04 sec Speed: 1288.26 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 127 STEP 15875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.04
+INFO:root:[CHECKPOINT 127 STEP 15875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 15900] StepTime: 0.03 sec Speed: 1211.01 targets/s Total_targets: 11533
+INFO:root:[STEP 15930] StepTime: 0.04 sec Speed: 1176.88 targets/s Total_targets: 11533
+INFO:root:[STEP 15960] StepTime: 0.04 sec Speed: 1318.06 targets/s Total_targets: 11533
+INFO:root:[STEP 15990] StepTime: 0.04 sec Speed: 1285.49 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 128 STEP 16000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 128 STEP 16000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 128 STEP 16000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 16020] StepTime: 0.04 sec Speed: 1226.10 targets/s Total_targets: 11533
+INFO:root:[STEP 16050] StepTime: 0.04 sec Speed: 1244.97 targets/s Total_targets: 11533
+INFO:root:[STEP 16080] StepTime: 0.04 sec Speed: 1249.47 targets/s Total_targets: 11533
+INFO:root:[STEP 16110] StepTime: 0.03 sec Speed: 1297.82 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 129 STEP 16125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 129 STEP 16125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16140] StepTime: 0.04 sec Speed: 1351.74 targets/s Total_targets: 11533
+INFO:root:[STEP 16170] StepTime: 0.04 sec Speed: 1348.66 targets/s Total_targets: 11533
+INFO:root:[STEP 16200] StepTime: 0.03 sec Speed: 1234.60 targets/s Total_targets: 11533
+INFO:root:[STEP 16230] StepTime: 0.04 sec Speed: 1248.84 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 130 STEP 16250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 130 STEP 16250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16260] StepTime: 0.04 sec Speed: 1376.37 targets/s Total_targets: 11533
+INFO:root:[STEP 16290] StepTime: 0.04 sec Speed: 1275.84 targets/s Total_targets: 11533
+INFO:root:[STEP 16320] StepTime: 0.04 sec Speed: 1253.09 targets/s Total_targets: 11533
+INFO:root:[STEP 16350] StepTime: 0.03 sec Speed: 1330.69 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 131 STEP 16375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 131 STEP 16375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16380] StepTime: 0.04 sec Speed: 1264.16 targets/s Total_targets: 11533
+INFO:root:[STEP 16410] StepTime: 0.04 sec Speed: 1313.27 targets/s Total_targets: 11533
+INFO:root:[STEP 16440] StepTime: 0.04 sec Speed: 1260.36 targets/s Total_targets: 11533
+INFO:root:[STEP 16470] StepTime: 0.04 sec Speed: 1281.18 targets/s Total_targets: 11533
+INFO:root:[STEP 16500] StepTime: 0.03 sec Speed: 1274.26 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 132 STEP 16500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 132 STEP 16500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16530] StepTime: 0.04 sec Speed: 1383.40 targets/s Total_targets: 11533
+INFO:root:[STEP 16560] StepTime: 0.04 sec Speed: 1339.63 targets/s Total_targets: 11533
+INFO:root:[STEP 16590] StepTime: 0.03 sec Speed: 1285.74 targets/s Total_targets: 11533
+INFO:root:[STEP 16620] StepTime: 0.03 sec Speed: 1323.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 133 STEP 16625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 133 STEP 16625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 133 STEP 16625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 16650] StepTime: 0.03 sec Speed: 1323.93 targets/s Total_targets: 11533
+INFO:root:[STEP 16680] StepTime: 0.03 sec Speed: 1310.32 targets/s Total_targets: 11533
+INFO:root:[STEP 16710] StepTime: 0.03 sec Speed: 1290.54 targets/s Total_targets: 11533
+INFO:root:[STEP 16740] StepTime: 0.03 sec Speed: 1320.89 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 134 STEP 16750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 134 STEP 16750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16770] StepTime: 0.04 sec Speed: 1317.16 targets/s Total_targets: 11533
+INFO:root:[STEP 16800] StepTime: 0.04 sec Speed: 1287.77 targets/s Total_targets: 11533
+INFO:root:[STEP 16830] StepTime: 0.03 sec Speed: 1238.32 targets/s Total_targets: 11533
+INFO:root:[STEP 16860] StepTime: 0.04 sec Speed: 1270.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 135 STEP 16875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 135 STEP 16875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 16890] StepTime: 0.04 sec Speed: 1179.85 targets/s Total_targets: 11533
+INFO:root:[STEP 16920] StepTime: 0.03 sec Speed: 1182.57 targets/s Total_targets: 11533
+INFO:root:[STEP 16950] StepTime: 0.03 sec Speed: 1162.27 targets/s Total_targets: 11533
+INFO:root:[STEP 16980] StepTime: 0.04 sec Speed: 1258.55 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 136 STEP 17000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 136 STEP 17000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 136 STEP 17000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 17010] StepTime: 0.04 sec Speed: 1315.72 targets/s Total_targets: 11533
+INFO:root:[STEP 17040] StepTime: 0.03 sec Speed: 1283.76 targets/s Total_targets: 11533
+INFO:root:[STEP 17070] StepTime: 0.04 sec Speed: 1111.82 targets/s Total_targets: 11533
+INFO:root:[STEP 17100] StepTime: 0.04 sec Speed: 1186.43 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 137 STEP 17125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 137 STEP 17125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 17130] StepTime: 0.04 sec Speed: 1217.36 targets/s Total_targets: 11533
+INFO:root:[STEP 17160] StepTime: 0.03 sec Speed: 1299.93 targets/s Total_targets: 11533
+INFO:root:[STEP 17190] StepTime: 0.04 sec Speed: 1297.54 targets/s Total_targets: 11533
+INFO:root:[STEP 17220] StepTime: 0.04 sec Speed: 1282.42 targets/s Total_targets: 11533
+INFO:root:[STEP 17250] StepTime: 0.04 sec Speed: 1319.39 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 138 STEP 17250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 138 STEP 17250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 17280] StepTime: 0.04 sec Speed: 1248.42 targets/s Total_targets: 11533
+INFO:root:[STEP 17310] StepTime: 0.04 sec Speed: 1204.56 targets/s Total_targets: 11533
+INFO:root:[STEP 17340] StepTime: 0.04 sec Speed: 1229.17 targets/s Total_targets: 11533
+INFO:root:[STEP 17370] StepTime: 0.04 sec Speed: 1118.87 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 139 STEP 17375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 139 STEP 17375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 17400] StepTime: 0.04 sec Speed: 1149.67 targets/s Total_targets: 11533
+INFO:root:[STEP 17430] StepTime: 0.04 sec Speed: 1072.61 targets/s Total_targets: 11533
+INFO:root:[STEP 17460] StepTime: 0.04 sec Speed: 1135.07 targets/s Total_targets: 11533
+INFO:root:[STEP 17490] StepTime: 0.04 sec Speed: 1081.67 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 140 STEP 17500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 140 STEP 17500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 140 STEP 17500] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 17520] StepTime: 0.04 sec Speed: 1200.65 targets/s Total_targets: 11533
+INFO:root:[STEP 17550] StepTime: 0.04 sec Speed: 1177.64 targets/s Total_targets: 11533
+INFO:root:[STEP 17580] StepTime: 0.04 sec Speed: 1132.81 targets/s Total_targets: 11533
+INFO:root:[STEP 17610] StepTime: 0.04 sec Speed: 1050.38 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 141 STEP 17625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 141 STEP 17625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 141 STEP 17625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 17640] StepTime: 0.04 sec Speed: 1154.87 targets/s Total_targets: 11533
+INFO:root:[STEP 17670] StepTime: 0.04 sec Speed: 1182.26 targets/s Total_targets: 11533
+INFO:root:[STEP 17700] StepTime: 0.04 sec Speed: 1121.25 targets/s Total_targets: 11533
+INFO:root:[STEP 17730] StepTime: 0.04 sec Speed: 1132.94 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 142 STEP 17750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 142 STEP 17750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 17760] StepTime: 0.04 sec Speed: 1154.46 targets/s Total_targets: 11533
+INFO:root:[STEP 17790] StepTime: 0.04 sec Speed: 1168.33 targets/s Total_targets: 11533
+INFO:root:[STEP 17820] StepTime: 0.04 sec Speed: 1305.62 targets/s Total_targets: 11533
+INFO:root:[STEP 17850] StepTime: 0.04 sec Speed: 1272.79 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 143 STEP 17875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 143 STEP 17875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 143 STEP 17875] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 17880] StepTime: 0.04 sec Speed: 1322.41 targets/s Total_targets: 11533
+INFO:root:[STEP 17910] StepTime: 0.04 sec Speed: 1280.81 targets/s Total_targets: 11533
+INFO:root:[STEP 17940] StepTime: 0.03 sec Speed: 1197.44 targets/s Total_targets: 11533
+INFO:root:[STEP 17970] StepTime: 0.04 sec Speed: 1332.02 targets/s Total_targets: 11533
+INFO:root:[STEP 18000] StepTime: 0.04 sec Speed: 1209.81 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 144 STEP 18000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 144 STEP 18000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 144 STEP 18000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 18030] StepTime: 0.04 sec Speed: 1171.98 targets/s Total_targets: 11533
+INFO:root:[STEP 18060] StepTime: 0.04 sec Speed: 1292.44 targets/s Total_targets: 11533
+INFO:root:[STEP 18090] StepTime: 0.03 sec Speed: 1132.78 targets/s Total_targets: 11533
+INFO:root:[STEP 18120] StepTime: 0.04 sec Speed: 1250.65 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 145 STEP 18125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 145 STEP 18125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 145 STEP 18125] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 18150] StepTime: 0.04 sec Speed: 1210.74 targets/s Total_targets: 11533
+INFO:root:[STEP 18180] StepTime: 0.04 sec Speed: 1291.15 targets/s Total_targets: 11533
+INFO:root:[STEP 18210] StepTime: 0.03 sec Speed: 1201.01 targets/s Total_targets: 11533
+INFO:root:[STEP 18240] StepTime: 0.03 sec Speed: 1305.20 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 146 STEP 18250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 146 STEP 18250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 18270] StepTime: 0.04 sec Speed: 1305.74 targets/s Total_targets: 11533
+INFO:root:[STEP 18300] StepTime: 0.04 sec Speed: 1367.61 targets/s Total_targets: 11533
+INFO:root:[STEP 18330] StepTime: 0.04 sec Speed: 1323.00 targets/s Total_targets: 11533
+INFO:root:[STEP 18360] StepTime: 0.04 sec Speed: 1416.88 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 147 STEP 18375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 147 STEP 18375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 18390] StepTime: 0.04 sec Speed: 1327.76 targets/s Total_targets: 11533
+INFO:root:[STEP 18420] StepTime: 0.04 sec Speed: 1359.38 targets/s Total_targets: 11533
+INFO:root:[STEP 18450] StepTime: 0.04 sec Speed: 1317.90 targets/s Total_targets: 11533
+INFO:root:[STEP 18480] StepTime: 0.03 sec Speed: 1382.65 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 148 STEP 18500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 148 STEP 18500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 18510] StepTime: 0.04 sec Speed: 1320.73 targets/s Total_targets: 11533
+INFO:root:[STEP 18540] StepTime: 0.04 sec Speed: 1377.23 targets/s Total_targets: 11533
+INFO:root:[STEP 18570] StepTime: 0.03 sec Speed: 1236.87 targets/s Total_targets: 11533
+INFO:root:[STEP 18600] StepTime: 0.04 sec Speed: 1335.18 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 149 STEP 18625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.00
+INFO:root:[CHECKPOINT 149 STEP 18625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 149 STEP 18625] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 18630] StepTime: 0.04 sec Speed: 1327.05 targets/s Total_targets: 11533
+INFO:root:[STEP 18660] StepTime: 0.03 sec Speed: 1334.97 targets/s Total_targets: 11533
+INFO:root:[STEP 18690] StepTime: 0.03 sec Speed: 1299.18 targets/s Total_targets: 11533
+INFO:root:[STEP 18720] StepTime: 0.03 sec Speed: 1255.57 targets/s Total_targets: 11533
+INFO:root:[STEP 18750] StepTime: 0.04 sec Speed: 1312.99 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 150 STEP 18750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 150 STEP 18750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 150 STEP 18750] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 18780] StepTime: 0.04 sec Speed: 1110.80 targets/s Total_targets: 11533
+INFO:root:[STEP 18810] StepTime: 0.04 sec Speed: 1157.42 targets/s Total_targets: 11533
+INFO:root:[STEP 18840] StepTime: 0.04 sec Speed: 1311.04 targets/s Total_targets: 11533
+INFO:root:[STEP 18870] StepTime: 0.04 sec Speed: 1230.22 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 151 STEP 18875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 151 STEP 18875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 18900] StepTime: 0.04 sec Speed: 1274.50 targets/s Total_targets: 11533
+INFO:root:[STEP 18930] StepTime: 0.03 sec Speed: 1251.70 targets/s Total_targets: 11533
+INFO:root:[STEP 18960] StepTime: 0.04 sec Speed: 1355.91 targets/s Total_targets: 11533
+INFO:root:[STEP 18990] StepTime: 0.03 sec Speed: 1248.44 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 152 STEP 19000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 152 STEP 19000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[CHECKPOINT 152 STEP 19000] Model saved using 0.00 sec at ../model/model_small/saved_model/best
+INFO:root:[STEP 19020] StepTime: 0.04 sec Speed: 1252.10 targets/s Total_targets: 11533
+INFO:root:[STEP 19050] StepTime: 0.03 sec Speed: 1271.48 targets/s Total_targets: 11533
+INFO:root:[STEP 19080] StepTime: 0.04 sec Speed: 1269.40 targets/s Total_targets: 11533
+INFO:root:[STEP 19110] StepTime: 0.04 sec Speed: 1229.11 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 153 STEP 19125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 153 STEP 19125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19140] StepTime: 0.03 sec Speed: 1356.91 targets/s Total_targets: 11533
+INFO:root:[STEP 19170] StepTime: 0.04 sec Speed: 1371.05 targets/s Total_targets: 11533
+INFO:root:[STEP 19200] StepTime: 0.03 sec Speed: 1338.94 targets/s Total_targets: 11533
+INFO:root:[STEP 19230] StepTime: 0.03 sec Speed: 1267.15 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 154 STEP 19250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 154 STEP 19250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19260] StepTime: 0.04 sec Speed: 1354.62 targets/s Total_targets: 11533
+INFO:root:[STEP 19290] StepTime: 0.03 sec Speed: 1357.14 targets/s Total_targets: 11533
+INFO:root:[STEP 19320] StepTime: 0.04 sec Speed: 1322.39 targets/s Total_targets: 11533
+INFO:root:[STEP 19350] StepTime: 0.04 sec Speed: 1367.56 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 155 STEP 19375] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 155 STEP 19375] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19380] StepTime: 0.04 sec Speed: 1362.43 targets/s Total_targets: 11533
+INFO:root:[STEP 19410] StepTime: 0.03 sec Speed: 1307.61 targets/s Total_targets: 11533
+INFO:root:[STEP 19440] StepTime: 0.03 sec Speed: 1231.45 targets/s Total_targets: 11533
+INFO:root:[STEP 19470] StepTime: 0.03 sec Speed: 1357.46 targets/s Total_targets: 11533
+INFO:root:[STEP 19500] StepTime: 0.03 sec Speed: 1302.57 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 156 STEP 19500] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 156 STEP 19500] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19530] StepTime: 0.04 sec Speed: 1349.75 targets/s Total_targets: 11533
+INFO:root:[STEP 19560] StepTime: 0.04 sec Speed: 1393.30 targets/s Total_targets: 11533
+INFO:root:[STEP 19590] StepTime: 0.04 sec Speed: 1375.46 targets/s Total_targets: 11533
+INFO:root:[STEP 19620] StepTime: 0.03 sec Speed: 1273.31 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 157 STEP 19625] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 157 STEP 19625] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19650] StepTime: 0.04 sec Speed: 1320.83 targets/s Total_targets: 11533
+INFO:root:[STEP 19680] StepTime: 0.03 sec Speed: 1211.57 targets/s Total_targets: 11533
+INFO:root:[STEP 19710] StepTime: 0.04 sec Speed: 1330.92 targets/s Total_targets: 11533
+INFO:root:[STEP 19740] StepTime: 0.03 sec Speed: 1263.48 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 158 STEP 19750] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.02
+INFO:root:[CHECKPOINT 158 STEP 19750] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19770] StepTime: 0.04 sec Speed: 1321.62 targets/s Total_targets: 11533
+INFO:root:[STEP 19800] StepTime: 0.03 sec Speed: 1330.28 targets/s Total_targets: 11533
+INFO:root:[STEP 19830] StepTime: 0.04 sec Speed: 1300.26 targets/s Total_targets: 11533
+INFO:root:[STEP 19860] StepTime: 0.04 sec Speed: 1347.77 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 159 STEP 19875] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.03
+INFO:root:[CHECKPOINT 159 STEP 19875] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 19890] StepTime: 0.03 sec Speed: 1236.06 targets/s Total_targets: 11533
+INFO:root:[STEP 19920] StepTime: 0.04 sec Speed: 1328.17 targets/s Total_targets: 11533
+INFO:root:[STEP 19950] StepTime: 0.04 sec Speed: 1317.84 targets/s Total_targets: 11533
+INFO:root:[STEP 19980] StepTime: 0.04 sec Speed: 1370.12 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 160 STEP 20000] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 160 STEP 20000] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 20010] StepTime: 0.04 sec Speed: 1334.34 targets/s Total_targets: 11533
+INFO:root:[STEP 20040] StepTime: 0.04 sec Speed: 1314.46 targets/s Total_targets: 11533
+INFO:root:[STEP 20070] StepTime: 0.03 sec Speed: 1328.79 targets/s Total_targets: 11533
+INFO:root:[STEP 20100] StepTime: 0.04 sec Speed: 1404.28 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 161 STEP 20125] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.01
+INFO:root:[CHECKPOINT 161 STEP 20125] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:[STEP 20130] StepTime: 0.03 sec Speed: 1401.12 targets/s Total_targets: 11533
+INFO:root:[STEP 20160] StepTime: 0.03 sec Speed: 1368.78 targets/s Total_targets: 11533
+INFO:root:[STEP 20190] StepTime: 0.03 sec Speed: 1391.54 targets/s Total_targets: 11533
+INFO:root:[STEP 20220] StepTime: 0.03 sec Speed: 1327.38 targets/s Total_targets: 11533
+INFO:root:[STEP 20250] StepTime: 0.04 sec Speed: 1351.19 targets/s Total_targets: 11533
+INFO:root:[CHECKPOINT 162 STEP 20250] Learning_rate: 0.1000 Dev_ppx: 1.00 Train_ppx: 1.00
+INFO:root:[CHECKPOINT 162 STEP 20250] Model saved using 0.01 sec at ../model/model_small/saved_model/model
+INFO:root:Training finished. Running out of patience.

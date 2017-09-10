@@ -1,0 +1,6 @@
+best_buckets.py 计算最佳buckets配置
+data_util.py 数据预处理
+data_iterator.py 数据迭代器
+run.py 训练、预测等入口
+seqModel.py RNNLM模型的定义
+generate_jobs.py 超参数grid search
